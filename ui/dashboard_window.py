@@ -17,7 +17,7 @@ class DashboardWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("Pesticide Inventory System")
+        self.setWindowTitle("Product Of Bht")
         self.showMaximized()
 
         main_widget = QWidget()

@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QWidget, QVBoxLayout, QPushButton
-from PySide6.QtCore import Signal
+from PySide6.QtCore import Signal, Qt
 
 
 class Sidebar(QWidget):
@@ -9,18 +9,19 @@ class Sidebar(QWidget):
     def __init__(self):
         super().__init__()
 
-        # important
         self.setObjectName("Sidebar")
         self.setFixedWidth(220)
-        self.setAutoFillBackground(True)
+
+        # IMPORTANT: allows stylesheet background to render
+        self.setAttribute(Qt.WA_StyledBackground, True)
 
         self.setStyleSheet("""
 #Sidebar {
     background-color: #8bbfb3;
-    border: 3px solid #0d47a1;
+    border: 2px solid #08a680;
 }
 
-#Sidebar QPushButton{
+#Sidebar QPushButton {
     color:#0d47a1;
     background:transparent;
     border:none;
@@ -30,7 +31,7 @@ class Sidebar(QWidget):
     font-weight:bold;
 }
 
-#Sidebar QPushButton:hover{
+#Sidebar QPushButton:hover {
     background-color:#1b5e20;
     color:white;
 }

@@ -15,7 +15,7 @@ class TopBar(QWidget):
 
         self.setStyleSheet("""
         background-color: white;
-        border-bottom: 1px solid #dcdcdc;
+        border-bottom: 1px solid #08a680;
         """)
 
         layout = QHBoxLayout()
